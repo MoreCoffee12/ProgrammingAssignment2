@@ -30,7 +30,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Use the special "matrix" to calculate an inverse, if it doesn't exist. If it does exist
 ## then use the previously calculated function.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x = matrix(), ...) {
   ## Return a matrix that is the inverse of 'x'
   inv <- x$getinv()
   
@@ -40,7 +40,7 @@ cacheSolve <- function(x, ...) {
   }
   
   data <- x$get()
-  inv <- solve(x)
+  inv <- solve(data)
   x$setinv(inv)
   inv
 
