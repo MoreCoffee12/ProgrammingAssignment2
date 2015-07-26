@@ -4,4 +4,6 @@ print(B)
 matrixx<-makeCacheMatrix(B)
 matrixx$get()
 cacheSolve(matrixx)
+## This line should result in a recall of the cached matrix
+cacheSolve(matrixx)
 
